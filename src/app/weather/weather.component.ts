@@ -15,7 +15,7 @@ export class WeatherComponent implements OnInit {
   op_country: string = "";
   op_date: string = "";
   op_text: string = "";
-  op_temp: number = ;
+  op_temp: string = "" ;
   constructor(private _sharedService: SharedService) {
   }
  
@@ -31,7 +31,7 @@ export class WeatherComponent implements OnInit {
         this.op_country = lstresult["query"]["results"]["channel"]["location"]["country"];
         this.op_date = lstresult["query"]["results"]["channel"]["item"]["condition"]["date"];
         this.op_text = lstresult["query"]["results"]["channel"]["item"]["condition"]["text"];
-        this.op_temp = (lstresult["query"]["results"]["channel"]["item"]["condition"]["temp"]-32)/1.8; 
+        this.op_temp = ((lstresult["query"]["results"]["channel"]["item"]["condition"]["temp"]-32)/1.8).toString(); 
       },
       error => {
         console.log("Error. The findWeather result JSON value is as follows:");
