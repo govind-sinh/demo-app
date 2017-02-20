@@ -15,7 +15,7 @@ export class WeatherComponent implements OnInit {
   op_country: string = "";
   op_date: string = "";
   op_text: string = "";
-  op_temp: string = "";
+  op_temp: number = ;
   constructor(private _sharedService: SharedService) {
   }
  
