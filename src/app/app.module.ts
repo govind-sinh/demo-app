@@ -10,6 +10,13 @@ import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
 import { CONST_ROUTING } from './app.routing';
 import { SharedService } from "./shared.service";
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { AlertService } from './_services/alert.service';
+import { AuthenticationService } from './_services/authentication.service';
+import { UserService } from './_services/user.service';
+import { AuthGuard } from './_guards/auth.guard';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +24,10 @@ import { SharedService } from "./shared.service";
     MenuComponent,
     WeatherComponent,
     CurrencyComponent,
-    MovieComponent
+    MovieComponent,
+    RegisterComponent,
+    LoginComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +35,7 @@ import { SharedService } from "./shared.service";
     HttpModule,
     CONST_ROUTING
   ],
-  providers: [SharedService],
+  providers: [SharedService,AlertService,AuthenticationService,UserService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

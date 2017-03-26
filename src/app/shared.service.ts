@@ -10,7 +10,7 @@ export class SharedService {
     weatherURL3 = "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
     findMovieURL1 = "https://www.omdbapi.com/?t=";
     findMovieURL2 = "&y=&plot=short&r=json"; 
-    currencyURL = "https://api.fixer.io/latest?symbols="; 
+    currencyURL = "https://api.fixer.io/latest?symbols=";//"https://192.168.0.116:8000/new"; 
     totReqsMade: number = 0;
     constructor(private _http: Http) { }
  
@@ -38,6 +38,6 @@ export class SharedService {
             .map(response => {
                 { return response.json() };
             })
-            .catch(error => Observable.throw(error.json()));
+            .catch(error => Observable.throw(error));
     }
 }
