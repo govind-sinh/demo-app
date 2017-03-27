@@ -6,7 +6,7 @@ var favicon = require('serve-favicon');
 // Run the app by serving the static files
 // in the dist directory
 app.use(express.static(__dirname + '/dist'));
-app.use(favicon(path.join(__dirname, '/src','favicon.ico')));
+app.use(favicon(path.join(__dirname, 'src','favicon.ico')));
 // If an incoming request uses
 // a protocol other than HTTPS,
 // redirect that request to the
