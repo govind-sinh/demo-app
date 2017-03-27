@@ -4,7 +4,7 @@ import { AlertService } from '../_services/alert.service';
 import { UserService } from '../_services/user.service';
 
 @Component({
-  moduleId: module.id.toString(),
+  moduleId: module.id,
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
