@@ -14,7 +14,7 @@ export class MovieComponent implements OnInit {
     mv_Director: string = "";
     mv_Actors: string = "";
     mv_Plot: string = "";
-    constructor(private _sharedService: SharedService) {
+    constructor(public _sharedService: SharedService) {
     }
  
     ngOnInit() {
