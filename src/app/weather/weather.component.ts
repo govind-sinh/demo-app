@@ -16,7 +16,7 @@ export class WeatherComponent implements OnInit {
   op_date: string = "";
   op_text: string = "";
   op_temp: string = "" ;
-  constructor(public _sharedService: SharedService) {
+  constructor(private _sharedService: SharedService) {
   }
  
   ngOnInit() {

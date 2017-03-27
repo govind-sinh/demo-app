@@ -9,7 +9,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { MovieComponent } from './movie/movie.component';
 import { CONST_ROUTING } from './app.routing';
-import { SharedService } from "./shared.service";
+import { SharedService } from "./_services/shared.service";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AlertService } from './_services/alert.service';
